@@ -1,0 +1,17 @@
+<h1>Dashboard for user <%= email %></h1>
+
+<h2>I live at <%= address %></h2>
+<form method="post" action="/dashboard/delete">
+  <button type="submit">Delete</button>
+</form>
+
+<form method="post" action="/logout">
+  <button type="submit">Logout</button>
+</form>
+<% if (userLevel === 1) { %>
+<p>Hello world</p>
+<% } %>
+<br />
+<% if (userLevel === 2) { %>
+<p>Du er admin</p>
+<% } %>
